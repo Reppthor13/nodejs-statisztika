@@ -18,7 +18,7 @@ async function selectall() {
 }
 
 async function stats() {
-    const query = 'SELECT * FROM exampletable;';
+    const query = 'SELECT * FROM vehicles;';
     const [rows] = await pool.execute(query);
     return rows;
 }
