@@ -35,3 +35,21 @@ INSERT INTO employees (name, department, salary, is_active) VALUES
 ('Varga Balázs', 'Sales', 700000, 1),
 ('Kiss László', 'Sales', 750000, 1),
 ('Horváth Máté', 'IT', 900000, 0);
+
+
+CREATE TABLE purchases (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    price INT NOT NULL,
+    quantity INT NOT NULL,
+    purchase_date DATE NOT NULL
+);
+
+INSERT INTO purchases (product_name, category, price, quantity, purchase_date) VALUES
+('Laptop Pro', 'Electronics', 400000, 2, '2024-03-01'),
+('Vezeték nélküli Egér', 'Electronics', 15000, 5, '2024-03-02'),
+('Irodai Szék', 'Furniture', 45000, 3, '2024-03-03'),
+('Íróasztal', 'Furniture', 60000, 1, '2024-03-04'),
+('Okostelefon', 'Electronics', 250000, 4, '2024-03-05'),
+('Kávéfőző', 'Appliances', 35000, 2, '2024-03-05');

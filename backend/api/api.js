@@ -49,10 +49,10 @@ router.get('/testsql', async (request, response) => {
 
 router.get('/api/statistics/brands', async (request, response) => {
     try {
-        const selectall = await database.selectall();
+        const stats = await database.stats();
         response.status(200).json({
             message: 'Ez a végpont működik.',
-            results: selectall
+            results: stats
         });
     } catch (error) {
         response.status(500).json({
