@@ -16,7 +16,14 @@ async function selectall() {
     const [rows] = await pool.execute(query);
     return rows;
 }
+
+async function stats() {
+    const query = 'SELECT * FROM exampletable;';
+    const [rows] = await pool.execute(query);
+    return rows;
+}
 //!Export
 module.exports = {
-    selectall
+    selectall,
+    stats
 };
